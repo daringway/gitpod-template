@@ -1,2 +1,5 @@
 image:
-  file: dockerfiles/gitpod.Dockerfile
+  file: ghcr.io/daringway/gitpod-workspace-base:main
+tasks:
+  - name: Config User Environment from the /env directory
+    command: dw-env-config
