@@ -1,9 +1,9 @@
 FROM gitpod/workspace-base
 
 # Update Ubuntu
-RUN \
-  sudo apt-get update && \
-  sudo apt-get -y upgrade
+# RUN \
+#   sudo apt-get update && \
+#   sudo apt-get -y upgrade
 
 # Install nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -21,5 +21,11 @@ RUN \
   nvm install ${NODE_VERSION} && \
   nvm use $NODE_VERSION && \
   nvm alias default ${NODE_VERSION}'
+
+# Install aws cli
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN sudo ./aws/install
+RUN rm -r awscliv2.zip ./aws
 
 CMD ["bash"]
