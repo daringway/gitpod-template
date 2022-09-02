@@ -1,5 +1,4 @@
-image:
-  file: ghcr.io/daringway/gitpod-workspace-base:main
+image: ghcr.io/daringway/gitpod-workspace-base:main
 tasks:
   - name: Config User Environment from the /env directory
     command: dw-env-config
