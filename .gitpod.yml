@@ -1,2 +1,2 @@
-image:
-  file: dockerfiles/gitpod.Dockerfile
+image: ghcr.io/daringway/gitpod-workspace-base:main
+  # file: dockerfiles/gitpod.Dockerfile
