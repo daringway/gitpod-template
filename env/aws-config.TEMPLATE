@@ -1,0 +1,24 @@
+# 1. Update `aws-config.default` 
+# 2. Rename this file to `aws-config.<BRANCH>`  
+#    where <BRANCH> is the name of the branch you want the aws-config to be used on.
+
+# For each config file it is recommended to have a [profile to default].
+# You can have multiple profiles listed in each config file such default and admin.
+
+# You can use gitpod environment variables: https://www.gitpod.io/docs/environment-variables 
+
+[profile default]
+sso_start_url = ${AWS_SSO_START_URL:-https://COMPANY.awsapps.com/start}
+sso_region = ${AWS_SSO_REGION:-us-east-2}
+sso_account_id = ${AWS_SSO_ACCOUNT_ID:-123456790}
+sso_role_name = ${AWS_SSO_ROLE_NAME:-AWSDeveloperAccess}
+region = ${REGION:-us-east-2}
+output = json
+
+[profile admin]
+sso_start_url = ${AWS_SSO_START_URL:-https://COMPANY.awsapps.com/start}
+sso_region = ${AWS_SSO_REGION:-us-east-2}
+sso_account_id = ${AWS_SSO_ACCOUNT_ID:-123456790}
+sso_role_name = ${AWS_SSO_ROLE_NAME:-AWSAdministratorAccess}
+region = ${REGION:-us-east-2}
+output = json
