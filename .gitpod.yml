@@ -18,4 +18,8 @@ tasks:
 
   # - name: Install node with NVM
   #   env:
-  #     ENV_NODE_VERSION: 16
+  #     ENV_NODE_VERSION: 16.17
+
+  # - name: Install yarn with latest or version
+  #   env:
+  #     ENV_YARN_VERSION: latest
