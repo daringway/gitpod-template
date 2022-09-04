@@ -1,20 +1,12 @@
-image: ghcr.io/daringway/gitpod-workspace-base:env2
+image:
+  file: .gitpod.dockerfile
 tasks:
   - name: Config User Environment from the /env directory
-    env:
-      ENV_NODE_VERSION: 16.17
-      ENV_YARN_VERSION: latest
-    init: dw-env-init
-    command: dw-env-command
-
-  # - name: Enalbe ~/.aws/config with a custome env/aws-config[+BRANCH] file
-  #   env:
-  #     AWS_CONFIG: true
-
-  # - name: Enable ~/.aws/config for AWS SSO with default config
-  #   env:
-  #     AWS_SSO_START_URL: "START URL"
-  #     AWS_SSO_REGION: "us-east-1"
-  #     AWS_SSO_ACCOUNT_ID: "1234567890"
-  #     AWS_SSO_ROLE_NAME: "AWSDeveloperAccess"
-  #     AWS_REGION: "us-east-1"
+    # env:
+    # AWS_SSO_START_URL: "START URL"
+    # AWS_SSO_REGION: "us-east-1"
+    # AWS_SSO_ACCOUNT_ID: "1234567890"
+    # AWS_SSO_ROLE_NAME: "AWSDeveloperAccess"
+    # AWS_REGION: "us-east-1"
+    init: env-init
+    command: env-command
