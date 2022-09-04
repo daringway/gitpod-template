@@ -16,10 +16,10 @@ tasks:
   #     AWS_SSO_ROLE_NAME: "AWSDeveloperAccess"
   #     AWS_REGION: "us-east-1"
 
-  # - name: Install node with NVM
-  #   env:
-  #     ENV_NODE_VERSION: 16.17
+  - name: Install node with NVM
+    env:
+      ENV_NODE_VERSION: 16.17
 
-  # - name: Install yarn with latest or version
-  #   env:
-  #     ENV_YARN_VERSION: latest
+  - name: Install yarn with latest or version
+    env:
+      ENV_YARN_VERSION: latest
