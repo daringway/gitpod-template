@@ -1,6 +1,9 @@
 image: ghcr.io/daringway/gitpod-workspace-base:env2
 tasks:
   - name: Config User Environment from the /env directory
+    env:
+      ENV_NODE_VERSION: 16.17
+      ENV_YARN_VERSION: latest
     init: dw-env-init
     command: dw-env-command
 
@@ -15,11 +18,3 @@ tasks:
   #     AWS_SSO_ACCOUNT_ID: "1234567890"
   #     AWS_SSO_ROLE_NAME: "AWSDeveloperAccess"
   #     AWS_REGION: "us-east-1"
-
-  - name: Install node with NVM
-    env:
-      ENV_NODE_VERSION: 16.17
-
-  - name: Install yarn with latest or version
-    env:
-      ENV_YARN_VERSION: latest
