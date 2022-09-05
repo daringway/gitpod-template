@@ -1,10 +1,11 @@
 FROM ghcr.io/daringway/gitpod-workspace-base:env2
 
 # Docker build does not rebuild an image when a base image is changed, increase this counter to trigger it.
-ENV TRIGGER_REBUILD 1
+ENV TRIGGER_REBUILD 2
 
-RUN install-aws-cli
+ENV ENV_AWS_CLI_VERSION latest
 
-# Can specifiy any version supported by NVM.  Defaults to lts
-# Installs nvm, npm, node, and yarn
-# RUN install-node 16.16 
+ENV ENV_NODE_VERSION 16.17  # or support NVM version
+ENV ENV_YARN_VERSION latest
+
+RUN env-install

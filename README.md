@@ -7,5 +7,12 @@ To configure your `~/.aws/config` See [env/aws-config.TEMPLATE](./env/aws-config
 
 # Testing Dockerfile
 See [trying out your dockerfile](https://www.gitpod.io/docs/config-docker) for details.
-- docker build -f .gitpod.dockerfile -t gitpod-dockerfile-test .
-- docker run -it gitpod-dockerfile-test bash
+```
+docker build -f .gitpod.dockerfile -t gitpod-dockerfile-test .
+docker run -it gitpod-dockerfile-test bash
+```
+
+Clean all layers
+```
+docker images --no-trunc --format '{{.ID}}' | xargs docker rmi or docker volume prune -f 
+```
