@@ -1,13 +1,13 @@
-image: ghcr.io/daringway/gitpod-workspace-base:env2
-# image:
-#   file: .gitpod.dockerfile
+# image: ghcr.io/daringway/gitpod-workspace-base:env2
+image:
+  file: .gitpod.dockerfile
 
 tasks:
-  - name: Build Base Image
-    env:
-      ENV_AWS_CLI_VERSION: latest
-      ENV_NODE_VERSION: 16.16
-    init: env-install
+  # - name: Build Base Image
+  #   env:
+  #     ENV_AWS_CLI_VERSION: latest
+  #     ENV_NODE_VERSION: 16.16
+  #   init: env-install
 
   - name: Config User Environment from the /env directory
     # env:
