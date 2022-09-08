@@ -1,4 +1,4 @@
-FROM ghcr.io/daringway/gitpod-workspace-base:env2
+FROM ghcr.io/daringway/gitpod-workspace-base:main
 
 # Docker build does not rebuild an image when a base image is changed, increase this counter to trigger it.
 # Not an issue if you pin the image version
