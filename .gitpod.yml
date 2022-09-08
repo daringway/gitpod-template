@@ -3,12 +3,6 @@ image:
   file: .gitpod.dockerfile
 
 tasks:
-  # - name: Build Base Image
-  #   env:
-  #     ENV_AWS_CLI_VERSION: latest
-  #     ENV_NODE_VERSION: 16.16
-  #   init: env-install
-
   - name: Config User Environment from the /env directory
     # env:
     # AWS_SSO_START_URL: "START URL"
@@ -16,5 +10,4 @@ tasks:
     # AWS_SSO_ACCOUNT_ID: "1234567890"
     # AWS_SSO_ROLE_NAME: "AWSDeveloperAccess"
     # AWS_REGION: "us-east-1"
-    init: env-init
-    command: env-command
+    # command: config-aws-config

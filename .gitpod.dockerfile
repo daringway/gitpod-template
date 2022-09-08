@@ -6,13 +6,9 @@ ENV TRIGGER_REBUILD 2022-09-05
 
 # Uncomment any packages you want to include
 
-# ENV ENV_AWS_CLI_VERSION latest # Only latest is supported
-
-# ENV ENV_NODE_VERSION 16.17  # latest or NVM supported version
-# ENV ENV_YARN_VERSION latest
-
-# ENV ENV_AMPLIFY_CLI_VERSION latest
-
-# ENV ENV_PYTHON_VERSION latest
-
-RUN env-install
+# RUN install-python 3.8.8   # Must specify patch version
+# RUN install-aws-cli latest # Only latest is supported
+# RUN install-node 16.18     # Any nvm support version
+# RUN install-yarn latest    # Latest or apt version
+# RUN install-amplify-cli    # Only latest is supported
+# RUN install-ruby 3.1.2     # Must specify patch version
