@@ -1,5 +1,5 @@
-# 1. Update `aws-config.default` 
-# 2. Rename this file to `aws-config.<BRANCH>`  
+
+# Rename this file to `aws-config+<BRANCH>` or `aws-config+default`
 #    where <BRANCH> is the name of the branch you want the aws-config to be used on.
 
 # For each config file it is recommended to have a [profile to default].
